@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block web_content %}
+    <h1 id="title_h1">Đăng tin</h1>
+    
+    <div class="wrap-content">        
+        <div class="row">
+            <div class="col-md-4">
+                {{ wtf.quick_form(form) }}
+            </div>
+        </div>
+        <div id="wrap-btn"> 
+            <button id="btn"><a id="btn-cancle-link" href="{{ url_for('main.index') }}">Hủy</a></button>
+        </div>
+    </div>
+
+    <style type="text/css">
+        #wrap-btn{
+            padding: 10px 216px;
+            margin: 10px;
+        }
+        #btn {
+            height: 34px;
+            width: 59px;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+            background-color: white;
+        }
+        #btn:hover{
+            background-color: #e6e6e6;
+        }
+        #btn-cancle-link{
+            color: black;
+            text-decoration: none;
+            list-style: none;
+        }
+        #title_h1{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: black;
+            font-weight: 700;
+            text-align: center;
+        }
+        .col-md-4 {
+            width: 710px;
+            text-align: start;
+            align-items: center;
+            left: 225px;
+        }
+        .navbar-default {
+            background-color: gainsboro;
+        }
+    </style>
+{% endblock %}

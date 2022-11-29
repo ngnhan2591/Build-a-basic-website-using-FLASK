@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block web_content %}
+    <h1>Đăng nhập</h1>
+    <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+        </div>
+    </div>
+    <div class="footer">
+        <p>Bạn chưa có tài khoản? <a id="regis" href="{{ url_for('auth.register') }}">Đăng ký!</a></p>
+    </div>
+
+
+    <style type="text/css">
+        h1{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: black;
+            font-weight: 700;
+            text-align: center;
+        }
+        #regis:hover{
+            color: red;
+        }
+        .col-md-4 {
+            width: 500px;
+            text-align: start;
+            align-items: center;
+            left: 337px;
+        }
+        .footer{
+            text-align: center;
+            padding: 10px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            border: 1px solid #e6e6e6;
+            border-radius: 4px;
+            margin: 10px 190px;
+        }
+        .row {
+            margin-right: -15px;
+            margin-left: -15px;
+            margin-top: 65px;
+        }
+    </style>
+{% endblock %}

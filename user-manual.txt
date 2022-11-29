@@ -1,0 +1,24 @@
+In VSCode's interface, access the <'flask-web-demo'> folder, open 'Terminal' and run the following commands:
+
+/********************************************************************/
+
+>>> python -m venv <'your_folder'>
+
+>>> <'your_folder'>\Scripts\activate
+
+>>> pip/pip3 install -r requirements.txt
+
+>>> set FLASK_APP = main.py
+
+>>> flask db init
+
+>>> flask db upgrade
+
+>>> flask run
+
+
+/********************************************************************/
+
+			Similar to Command Prompt on Windows
+
+/*********************************THANKS*****************************/

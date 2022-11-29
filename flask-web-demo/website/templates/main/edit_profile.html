@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block web_content %}
+    <h1>Chỉnh sửa trang cá nhân</h1>
+    <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+        </div>
+    </div>
+
+    <style type="text/css">
+        h1{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: black;
+            font-weight: 700;
+            text-align: center;
+        }
+        .col-md-4 {
+            width: 500px;
+            text-align: start;
+            align-items: center;
+            left: 337px;
+        }
+        .row {
+            margin-right: -15px;
+            margin-left: -15px;
+            margin-top: 65px;
+        }
+    </style>
+{% endblock %}
